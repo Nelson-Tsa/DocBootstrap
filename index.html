@@ -18,7 +18,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#layout">Layout</a>
                     </li>
@@ -33,6 +33,33 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#utilitaires">Utilitaires</a>
+                    </li>
+                </ul>
+                <!-- Menu déroulant des composants -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="composantsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Accès rapide
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="composantsDropdown">
+                            <li><h6 class="dropdown-header">Composants</h6></li>
+                            <li><a class="dropdown-item" href="#carouselExample">Carrousel</a></li>
+                            <li><a class="dropdown-item" href="#accordionExample">Accordéon</a></li>
+                            <li><a class="dropdown-item" href="#myTab">Onglets (Tabs)</a></li>
+                            <li><a class="dropdown-item" href="#exampleModal">Fenêtres modales</a></li>
+                            <li><a class="dropdown-item" href="#tooltips-popovers">Tooltips et Popovers</a></li>
+                            <li><a class="dropdown-item" href="#pagination-section">Pagination</a></li>
+                            <li><a class="dropdown-item" href="#spinners-section">Spinners</a></li>
+                            <li><a class="dropdown-item" href="#alertes-section">Alertes</a></li>
+                            <li><a class="dropdown-item" href="#boutons-section">Boutons</a></li>
+                            <li><a class="dropdown-item" href="#cards-section">Cartes (Cards)</a></li>
+                            <li><a class="dropdown-item" href="#badges-section">Badges</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><h6 class="dropdown-header">Fonctionnalités</h6></li>
+                            <li><a class="dropdown-item" href="#searchBars">Barres de recherche</a></li>
+                            <li><a class="dropdown-item" href="#graphiques-section">Graphiques</a></li>
+                            <li><a class="dropdown-item" href="#authentication-forms">Formulaires d'authentification</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -242,6 +269,81 @@
                         <li><code>carousel-caption</code> - Texte superposé sur les slides</li>
                         <li><code>carousel-control-prev/next</code> - Boutons de navigation</li>
                     </ul>
+                    
+                    <div class="mt-3">
+                        <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="carouselCode">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                            </svg>
+                            Copier le code HTML
+                        </button>
+                        <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                    </div>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="carouselCode" class="code-to-copy"><code class="language-html">&lt;!-- Carrousel Bootstrap --&gt;
+&lt;div id="carouselExample" class="carousel slide" data-bs-ride="carousel"&gt;
+    &lt;!-- Indicateurs --&gt;
+    &lt;div class="carousel-indicators"&gt;
+        &lt;button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+        &lt;button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Contenu des slides --&gt;
+    &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+            &lt;img src="https://via.placeholder.com/800x400/007bff/ffffff?text=Slide+1" class="d-block w-100" alt="Slide 1"&gt;
+            &lt;div class="carousel-caption d-none d-md-block"&gt;
+                &lt;h5&gt;Premier slide&lt;/h5&gt;
+                &lt;p&gt;Description du premier slide&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="https://via.placeholder.com/800x400/28a745/ffffff?text=Slide+2" class="d-block w-100" alt="Slide 2"&gt;
+            &lt;div class="carousel-caption d-none d-md-block"&gt;
+                &lt;h5&gt;Deuxième slide&lt;/h5&gt;
+                &lt;p&gt;Description du deuxième slide&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+            &lt;img src="https://via.placeholder.com/800x400/dc3545/ffffff?text=Slide+3" class="d-block w-100" alt="Slide 3"&gt;
+            &lt;div class="carousel-caption d-none d-md-block"&gt;
+                &lt;h5&gt;Troisième slide&lt;/h5&gt;
+                &lt;p&gt;Description du troisième slide&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Contrôles de navigation --&gt;
+    &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
+        &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="visually-hidden"&gt;Précédent&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"&gt;
+        &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="visually-hidden"&gt;Suivant&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Script pour initialiser le carrousel avec options --&gt;
+&lt;script&gt;
+// Initialiser avec des options
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('#carouselExample');
+    if (carousel) {
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 3000,     // Temps entre chaque slide en ms (3 secondes)
+            wrap: true,         // Boucler en continu
+            keyboard: true,     // Permettre la navigation au clavier
+            pause: 'hover'      // Mettre en pause au survol
+        });
+    }
+});
+&lt;/script&gt;</code></pre>
                 </div>
             </div>
         </article>
@@ -288,6 +390,83 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="accordionCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="accordionCode" class="code-to-copy"><code class="language-html">&lt;!-- Accordéon Bootstrap --&gt;
+&lt;div class="accordion" id="accordionExample"&gt;
+    &lt;!-- Premier élément --&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;h2 class="accordion-header" id="headingOne"&gt;
+            &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
+                Élément d'accordéon #1
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"&gt;
+            &lt;div class="accordion-body"&gt;
+                &lt;p&gt;Contenu du premier accordéon. Cet élément est ouvert par défaut car il a la classe &lt;code&gt;show&lt;/code&gt;.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Deuxième élément --&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;h2 class="accordion-header" id="headingTwo"&gt;
+            &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
+                Élément d'accordéon #2
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"&gt;
+            &lt;div class="accordion-body"&gt;
+                &lt;p&gt;Contenu du deuxième accordéon.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Troisième élément --&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;h2 class="accordion-header" id="headingThree"&gt;
+            &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
+                Élément d'accordéon #3
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"&gt;
+            &lt;div class="accordion-body"&gt;
+                &lt;p&gt;Contenu du troisième accordéon. L'attribut &lt;code&gt;data-bs-parent&lt;/code&gt; permet de s'assurer qu'un seul élément est ouvert à la fois.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script pour ajouter des fonctionnalités supplémentaires --&gt;
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', function() {
+    // Ajouter des animations ou des événements personnalisés aux accordéons
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', function() {
+            // Animation lors de l'ouverture d'un panneau
+            if (!this.classList.contains('collapsed')) {
+                this.style.backgroundColor = '#e7f1ff';
+                setTimeout(() => {
+                    this.style.backgroundColor = '';
+                }, 300);
+            }
+        });
+    });
+});
+&lt;/script&gt;</code></pre>
+                </div>
             </div>
         </article>
         
@@ -322,6 +501,72 @@
                     <div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                         <p>Contenu du troisième onglet. La classe <code>fade</code> ajoute une animation de transition.</p>
                     </div>
+                </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="tabsCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="tabsCode" class="code-to-copy"><code class="language-html">&lt;!-- Onglets Bootstrap (Tabs) --&gt;
+&lt;ul class="nav nav-tabs" id="myTab" role="tablist"&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" 
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"&gt;
+            Onglet 1
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" 
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"&gt;
+            Onglet 2
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" 
+                type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"&gt;
+            Onglet 3
+        &lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content" id="myTabContent"&gt;
+    &lt;div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"&gt;
+        &lt;p&gt;Contenu du premier onglet. La classe &lt;code&gt;show active&lt;/code&gt; le rend visible par défaut.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane fade p-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"&gt;
+        &lt;p&gt;Contenu du deuxième onglet.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"&gt;
+        &lt;p&gt;Contenu du troisième onglet. La classe &lt;code&gt;fade&lt;/code&gt; ajoute une animation de transition.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script pour activer les onglets dynamiquement (optionnel) --&gt;
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', function() {
+    // Créer des instances d'onglets avec des options personnalisées
+    document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tabEl => {
+        tabEl.addEventListener('shown.bs.tab', event => {
+            // Vous pouvez exécuter du code lorsqu'un onglet est affiché
+            const activeTab = event.target; // L'onglet nouvellement activé
+            const previousTab = event.relatedTarget; // L'onglet précédemment actif
+            console.log('Onglet activé:', activeTab.id);
+            
+            // Exécuter des actions spécifiques en fonction de l'onglet actif
+            // const tabId = activeTab.getAttribute('aria-controls');
+            // const tabContent = document.getElementById(tabId);
+        });
+    });
+});
+&lt;/script&gt;</code></pre>
                 </div>
             </div>
         </article>
@@ -395,11 +640,85 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="modalCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="modalCode" class="code-to-copy"><code class="language-html">&lt;!-- Bouton pour ouvrir la modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+    Ouvrir la modal
+&lt;/button&gt;
+
+&lt;!-- Modal Bootstrap de base --&gt;
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Titre de la modal&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;Contenu de la modal...&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Fermer&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Enregistrer&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal avec backdrop statique --&gt;
+&lt;div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title" id="staticBackdropLabel"&gt;Modal statique&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;Cette modal ne se ferme pas quand on clique à l'extérieur.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Fermer&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal centrée verticalement --&gt;
+&lt;div class="modal fade" id="centeredModal" tabindex="-1" aria-labelledby="centeredModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog modal-dialog-centered"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title" id="centeredModalLabel"&gt;Modal centrée&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;Cette modal est centrée verticalement.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Fermer&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
             </div>
         </article>
 
         <!-- Tooltips et Popovers -->
-        <article class="mb-5">
+        <article class="mb-5" id="tooltips-popovers">
             <h3>Tooltips et Popovers</h3>
             <div class="example-container">
                 <!-- Tooltips -->
@@ -432,11 +751,62 @@
                         Popover à droite
                     </button>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="tooltipsPopoversCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="tooltipsPopoversCode" class="code-to-copy"><code class="language-html">&lt;!-- Tooltips --&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip en haut"&gt;
+    Tooltip en haut
+&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip à droite"&gt;
+    Tooltip à droite
+&lt;/button&gt;
+
+&lt;!-- Popovers --&gt;
+&lt;button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Titre du popover" 
+        data-bs-content="Contenu du popover"&gt;
+    Cliquez pour voir le popover
+&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="top" 
+        data-bs-title="Popover en haut" data-bs-content="Ce popover s'affiche en haut"&gt;
+    Popover en haut
+&lt;/button&gt;
+
+&lt;!-- Script d'initialisation (obligatoire pour tooltips et popovers) --&gt;
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialiser tous les tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Initialiser tous les popovers
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+    });
+});
+&lt;/script&gt;</code></pre>
+                </div>
             </div>
         </article>
 
         <!-- Pagination -->
-        <article class="mb-5">
+        <article class="mb-5" id="pagination-section">
             <h3>Pagination</h3>
             <div class="example-container">
                 <!-- Pagination de base -->
@@ -472,11 +842,73 @@
                         <p>Avec <code>pagination-sm</code> pour petite taille</p>
                     </nav>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="paginationCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="paginationCode" class="code-to-copy"><code class="language-html">&lt;!-- Pagination de base --&gt;
+&lt;nav aria-label="Exemple de pagination"&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item disabled"&gt;&lt;a class="page-link" href="#"&gt;Précédent&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Suivant&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Pagination grande taille --&gt;
+&lt;nav aria-label="Pagination grande taille"&gt;
+    &lt;ul class="pagination pagination-lg"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Pagination petite taille --&gt;
+&lt;nav aria-label="Pagination petite taille"&gt;
+    &lt;ul class="pagination pagination-sm"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Pagination avec icônes --&gt;
+&lt;nav aria-label="Pagination avec icônes"&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item"&gt;
+            &lt;a class="page-link" href="#" aria-label="Précédent"&gt;
+                &lt;span aria-hidden="true"&gt;&amp;laquo;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;
+            &lt;a class="page-link" href="#" aria-label="Suivant"&gt;
+                &lt;span aria-hidden="true"&gt;&amp;raquo;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </div>
             </div>
         </article>
         
         <!-- Spinners (indicateurs de chargement) -->
-        <article class="mb-5">
+        <article class="mb-5" id="spinners-section">
             <h3>Spinners (indicateurs de chargement)</h3>
             <div class="example-container">
                 <div class="spinner-border text-primary" role="status">
@@ -498,11 +930,60 @@
                     </button>
                     <p class="mt-2">Bouton avec spinner <code>spinner-border-sm</code></p>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="spinnersCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="spinnersCode" class="code-to-copy"><code class="language-html">&lt;!-- Spinner de base (border) --&gt;
+&lt;div class="spinner-border text-primary" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Chargement...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Spinner en croissance (grow) --&gt;
+&lt;div class="spinner-grow text-success" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Chargement...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Couleurs des spinners --&gt;
+&lt;div class="spinner-border text-primary" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-secondary" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-success" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-danger" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-warning" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-info" role="status"&gt;&lt;/div&gt;
+
+&lt;!-- Tailles des spinners --&gt;
+&lt;div class="spinner-border spinner-border-sm" role="status"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow spinner-grow-sm" role="status"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner dans un bouton --&gt;
+&lt;button class="btn btn-primary" type="button" disabled&gt;
+    &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+    Chargement...
+&lt;/button&gt;
+
+&lt;!-- Spinner centré --&gt;
+&lt;div class="d-flex justify-content-center"&gt;
+    &lt;div class="spinner-border" role="status"&gt;
+        &lt;span class="visually-hidden"&gt;Chargement...&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
             </div>
         </article>
 
         <!-- Alertes -->
-        <article class="mb-5">
+        <article class="mb-5" id="alertes-section">
             <h3>Alertes</h3>
             <div class="example-container">
                 <div class="alert alert-primary" role="alert">
@@ -523,11 +1004,64 @@
                 <div class="alert alert-info" role="alert">
                     Alerte avec <code>alert alert-info</code>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="alertsCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="alertsCode" class="code-to-copy"><code class="language-html">&lt;!-- Alertes Bootstrap --&gt;
+&lt;div class="alert alert-primary" role="alert"&gt;
+    Alerte primaire - Information importante.
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary" role="alert"&gt;
+    Alerte secondaire - Information complémentaire.
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+    Alerte succès - Opération réussie.
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+    Alerte danger - Erreur critique.
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+    Alerte avertissement - Attention requise.
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+    Alerte information - Détails supplémentaires.
+&lt;/div&gt;
+
+&lt;!-- Alerte avec titre et contenu --&gt;
+&lt;div class="alert alert-success" role="alert"&gt;
+    &lt;h4 class="alert-heading"&gt;Bravo !&lt;/h4&gt;
+    &lt;p&gt;Votre opération a été effectuée avec succès. Vous pouvez maintenant continuer.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p class="mb-0"&gt;Assurez-vous de vérifier vos paramètres.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Alerte avec bouton de fermeture --&gt;
+&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+    &lt;strong&gt;Attention !&lt;/strong&gt; Veuillez lire cette information importante.
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
             </div>
         </article>
 
         <!-- Boutons -->
-        <article class="mb-5">
+        <article class="mb-5" id="boutons-section">
             <h3>Boutons</h3>
             <div class="example-container">
                 <button type="button" class="btn btn-primary m-1">btn-primary</button>
@@ -537,6 +1071,56 @@
                 <button type="button" class="btn btn-warning m-1">btn-warning</button>
                 <button type="button" class="btn btn-info m-1">btn-info</button>
                 <button type="button" class="btn btn-light m-1">btn-light</button>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="buttonsCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="buttonsCode" class="code-to-copy"><code class="language-html">&lt;!-- Boutons Bootstrap standard --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+
+&lt;!-- Boutons avec contour --&gt;
+&lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+
+&lt;!-- Boutons de tailles différentes --&gt;
+&lt;button type="button" class="btn btn-primary btn-lg"&gt;Grand bouton&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Bouton normal&lt;/button&gt;
+&lt;button type="button" class="btn btn-success btn-sm"&gt;Petit bouton&lt;/button&gt;
+
+&lt;!-- Bouton état désactivé --&gt;
+&lt;button type="button" class="btn btn-primary" disabled&gt;Bouton désactivé&lt;/button&gt;
+
+&lt;!-- Bouton block (occupe toute la largeur) - Bootstrap 5 --&gt;
+&lt;div class="d-grid gap-2"&gt;
+    &lt;button class="btn btn-primary" type="button"&gt;Bouton block&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Groupe de boutons --&gt;
+&lt;div class="btn-group" role="group" aria-label="Groupe de boutons"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Gauche&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Milieu&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Droite&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
                 <button type="button" class="btn btn-dark m-1">btn-dark</button>
                 <button type="button" class="btn btn-link m-1">btn-link</button>
 
@@ -554,7 +1138,7 @@
         </article>
 
         <!-- Cartes -->
-        <article class="mb-5">
+        <article class="mb-5" id="cards-section">
             <h3>Cartes (Cards)</h3>
             <div class="example-container">
                 <div class="row">
@@ -589,11 +1173,80 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="cardsCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="cardsCode" class="code-to-copy"><code class="language-html">&lt;!-- Carte Bootstrap de base --&gt;
+&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;Entête de carte&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Titre de la carte&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Texte de la carte avec du contenu.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Bouton&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer text-muted"&gt;Pied de carte&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Carte avec image --&gt;
+&lt;div class="card"&gt;
+    &lt;img src="chemin/vers/image.jpg" class="card-img-top" alt="Description de l'image"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Titre de la carte&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Texte de la carte avec image.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Carte colorée --&gt;
+&lt;div class="card text-white bg-primary mb-3"&gt;
+    &lt;div class="card-header"&gt;Entête&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Titre de la carte primaire&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Texte avec fond coloré.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Carte avec bordure colorée --&gt;
+&lt;div class="card border-success mb-3"&gt;
+    &lt;div class="card-header bg-transparent border-success"&gt;Entête&lt;/div&gt;
+    &lt;div class="card-body text-success"&gt;
+        &lt;h5 class="card-title"&gt;Titre de la carte success&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Texte avec bordure colorée.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer bg-transparent border-success"&gt;Pied de carte&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Carte horizontale --&gt;
+&lt;div class="card mb-3"&gt;
+    &lt;div class="row g-0"&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;img src="chemin/vers/image.jpg" class="img-fluid rounded-start" alt="Description de l'image"&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-8"&gt;
+            &lt;div class="card-body"&gt;
+                &lt;h5 class="card-title"&gt;Titre de la carte&lt;/h5&gt;
+                &lt;p class="card-text"&gt;Texte de la carte horizontale.&lt;/p&gt;
+                &lt;p class="card-text"&gt;&lt;small class="text-muted"&gt;Dernière mise à jour il y a 3 minutes&lt;/small&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
             </div>
         </article>
         
         <!-- Badges -->
-        <article class="mb-5">
+        <article class="mb-5" id="badges-section">
             <h3>Badges</h3>
             <div class="example-container">
                 <h4>Badges simples</h4>
@@ -632,11 +1285,58 @@
                     </span>
                 </div>
                 <p class="mt-2">Les badges positionnés utilisent <code>position-absolute</code> avec <code>top-0 start-100 translate-middle</code>.</p>
+                
+                <div class="mt-3">
+                    <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="badgesCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        Copier le code HTML
+                    </button>
+                    <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                </div>
+                
+                <!-- Code HTML à copier (caché) -->
+                <div class="d-none">
+                    <pre id="badgesCode" class="code-to-copy"><code class="language-html">&lt;!-- Badges simples --&gt;
+&lt;h5&gt;Exemple avec texte &lt;span class="badge bg-primary"&gt;Badge primaire&lt;/span&gt;&lt;/h5&gt;
+
+&lt;!-- Badges dans des boutons --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;
+    Notifications &lt;span class="badge text-bg-secondary"&gt;4&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;
+    Messages &lt;span class="badge text-bg-light"&gt;7&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Badges avec forme arrondie --&gt;
+&lt;span class="badge rounded-pill bg-primary"&gt;Badge arrondi&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-danger"&gt;Danger&lt;/span&gt;
+
+&lt;!-- Badges avec positionnement --&gt;
+&lt;div class="position-relative d-inline-block me-4"&gt;
+    &lt;button type="button" class="btn btn-primary"&gt;Profil&lt;/button&gt;
+    &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;
+        99+
+        &lt;span class="visually-hidden"&gt;messages non lus&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Badge avec point de notification --&gt;
+&lt;div class="position-relative d-inline-block"&gt;
+    &lt;button type="button" class="btn btn-dark"&gt;Inbox&lt;/button&gt;
+    &lt;span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle"&gt;
+        &lt;span class="visually-hidden"&gt;Nouveau message&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                </div>
             </div>
         </article>
         
         <!-- Barres de recherche -->
-        <article class="mb-5">
+        <article class="mb-5" id="searchBars">
             <h3>Barres de recherche</h3>
             <div class="example-container">
                 <h4>Barre de recherche simple</h4>
@@ -756,7 +1456,7 @@
         </article>
         
         <!-- Graphiques (avec Chart.js) -->
-        <article class="mb-5">
+        <article class="mb-5" id="graphiques-section">
             <h3>Graphiques</h3>
             <div class="example-container">
                 <p>Bootstrap n'inclut pas de graphiques nativement, mais s'intègre bien avec des bibliothèques comme Chart.js.</p>
@@ -810,7 +1510,7 @@ const myChart = new Chart(ctx, {
         </article>
         
         <!-- Formulaire d'authentification -->
-        <article class="mb-5">
+        <article class="mb-5" id="authentication-forms">
             <h3>Formulaires d'authentification</h3>
             <p>Utilisez ces exemples de formulaires pour créer des systèmes d'authentification complets dans vos projets. Cliquez sur "Copier le code" pour obtenir le code HTML des formulaires.</p>
             <div class="example-container">
