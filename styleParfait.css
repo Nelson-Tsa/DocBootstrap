@@ -1,0 +1,117 @@
+/* Styles généraux */
+body {
+    padding-top: 60px; /* Pour laisser de l'espace pour la navbar fixée */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mise en évidence du code */
+code {
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #d63384;
+    font-size: 0.875em;
+}
+
+/* Style des conteneurs d'exemples */
+.example-container {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les sections */
+section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 80px; /* Pour la navigation par ancre */
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+/* Styles d'en-tête */
+#header {
+    background-color: #e9ecef;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Conserver les styles existants */
+#containerFluid {
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+}
+
+#rowEntete {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(42, 103, 123);
+}
+
+#colonneGauche {
+    border: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(61, 112, 241);
+}
+
+#colonneDroite {
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(61, 112, 241);
+}
+
+#row1 {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(17, 185, 241);
+}
+
+#row1 p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#container {
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(134, 216, 244);
+    padding-top: 5px;
+    text-align: center;
+    white-space: normal;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+}
+
+#containerdiagonal .row {
+    min-height: 140px; /* Hauteur suffisante pour voir l'effet */
+    background-color: #f8f9fa; /* Fond pour visualiser */
+}
+
+#containerdiagonal .col {
+    background-color: #e9ecef; /* Fond pour chaque colonne */
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}
+
+/* Styles pour mettre en évidence les composants Bootstrap */
+.border {
+    border-color: #6c757d !important;
+}
+
+/* Animation sur les boutons */
+.btn:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+}
+
+/* Style du pied de page */
+footer {
+    margin-top: 3rem;
+}

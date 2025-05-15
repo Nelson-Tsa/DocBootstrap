@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Bootstrap</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styleParfait.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="scriptParfait.js" defer></script>
+</head>
+<body>
+    <!-- Barre de navigation fixe avec menu déroulant pour naviguer dans les sections -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="main-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bootstrap Doc</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#layout">Layout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contenu">Contenu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#composants">Composants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#styles">Styles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#utilitaires">Utilitaires</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête principale avec description du projet -->
+    <header class="container-fluid mt-5 pt-5" id="header">
+        <div class="row py-4 text-center">
+            <div class="col-12">
+                <h1 class="display-4">Documentation Visuelle Bootstrap</h1>
+                <p class="lead">Ce site présente tous les éléments et fonctionnalités de Bootstrap avec les classes CSS directement visibles pour une meilleure compréhension.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION LAYOUT -->
+    <section class="container my-5" id="layout">
+        <h2 class="border-bottom pb-2 mb-4">Layout</h2>
+
+        <!-- Breakpoints et Containers -->
+        <article class="mb-5">
+            <h3>Containers</h3>
+            <div class="example-container">
+                <div class="container my-3 p-3 border" id="container-example">
+                    <p class="mb-0">Ceci est un <code>container</code> (class="container")</p>
+                </div>
+                <div class="container-fluid my-3 p-3 border" id="container-fluid-example">
+                    <p class="mb-0">Ceci est un <code>container-fluid</code> (class="container-fluid")</p>
+                </div>
+                <div class="container-sm my-3 p-3 border" id="container-sm-example">
+                    <p class="mb-0">Ceci est un <code>container-sm</code> (class="container-sm")</p>
+                </div>
+                <div class="container-md my-3 p-3 border" id="container-md-example">
+                    <p class="mb-0">Ceci est un <code>container-md</code> (class="container-md")</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Système de grille -->
+        <article class="mb-5">
+            <h3>Système de grille</h3>
+            <div class="example-container">
+                <!-- Grille simple -->
+                <div class="row my-3" id="row-example">
+                    <div class="col border p-2">
+                        <p class="mb-0">Colonne 1 avec <code>col</code></p>
+                    </div>
+                    <div class="col border p-2">
+                        <p class="mb-0">Colonne 2 avec <code>col</code></p>
+                    </div>
+                    <div class="col border p-2">
+                        <p class="mb-0">Colonne 3 avec <code>col</code></p>
+                    </div>
+                </div>
+
+                <!-- Grille avec tailles spécifiques -->
+                <div class="row my-3" id="row-sized-example">
+                    <div class="col-8 border p-2" id="col-8-example">
+                        <p class="mb-0">Colonne avec <code>col-8</code> (prend 8/12 de la largeur)</p>
+                    </div>
+                    <div class="col-4 border p-2" id="col-4-example">
+                        <p class="mb-0">Colonne avec <code>col-4</code> (prend 4/12 de la largeur)</p>
+                    </div>
+                </div>
+
+                <!-- Grille responsive -->
+                <div class="row my-3" id="row-responsive-example">
+                    <div class="col-12 col-md-6 col-lg-4 border p-2" id="col-responsive-example">
+                        <p class="mb-0">Colonne responsive avec <code>col-12 col-md-6 col-lg-4</code></p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 border p-2">
+                        <p class="mb-0">Colonne responsive avec <code>col-12 col-md-6 col-lg-4</code></p>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4 border p-2">
+                        <p class="mb-0">Colonne responsive avec <code>col-12 col-md-12 col-lg-4</code></p>
+                    </div>
+                </div>
+
+                <!-- Alignement vertical -->
+                <div class="container my-3" id="container-alignment">
+                    <div class="row align-items-start border" style="height: 120px;">
+                        <div class="col border p-2">Cellule avec <code>align-items-start</code> (sur la ligne)</div>
+                        <div class="col border p-2">Cellule avec <code>align-items-start</code> (sur la ligne)</div>
+                    </div>
+                    <div class="row align-items-center border my-3" style="height: 120px;">
+                        <div class="col border p-2">Cellule avec <code>align-items-center</code> (sur la ligne)</div>
+                        <div class="col border p-2">Cellule avec <code>align-items-center</code> (sur la ligne)</div>
+                    </div>
+                    <div class="row my-3 border" style="height: 120px;">
+                        <div class="col align-self-start border p-2">Cellule avec <code>align-self-start</code></div>
+                        <div class="col align-self-center border p-2">Cellule avec <code>align-self-center</code></div>
+                        <div class="col align-self-end border p-2">Cellule avec <code>align-self-end</code></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- SECTION CONTENU -->
+    <section class="container my-5" id="contenu">
+        <h2 class="border-bottom pb-2 mb-4">Contenu</h2>
+
+        <!-- Typographie -->
+        <article class="mb-5">
+            <h3>Typographie</h3>
+            <div class="example-container">
+                <h1>Titre h1 <small class="text-muted">avec text-muted</small></h1>
+                <h2>Titre h2</h2>
+                <h3>Titre h3</h3>
+                <h4>Titre h4</h4>
+                <h5>Titre h5</h5>
+                <h6>Titre h6</h6>
+                
+                <p class="lead my-3">Paragraphe avec classe <code>lead</code> pour le mettre en évidence.</p>
+                
+                <p>Texte normal avec <mark>texte surligné</mark> (balise mark).</p>
+                
+                <p>Vous pouvez utiliser <code>&lt;strong&gt;</code> pour du <strong>texte important</strong>.</p>
+                
+                <p>Textes avec classes utilitaires : 
+                    <span class="text-primary">text-primary</span>, 
+                    <span class="text-secondary">text-secondary</span>, 
+                    <span class="text-success">text-success</span>, 
+                    <span class="text-danger">text-danger</span>, 
+                    <span class="text-warning">text-warning</span>, 
+                    <span class="text-info">text-info</span>
+                </p>
+            </div>
+        </article>
+
+        <!-- Images -->
+        <article class="mb-5">
+            <h3>Images</h3>
+            <div class="example-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300" class="img-fluid" alt="Image responsive avec img-fluid">
+                        <p class="mt-2">Image avec classe <code>img-fluid</code></p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300" class="img-thumbnail" alt="Image avec bordure arrondie">
+                        <p class="mt-2">Image avec classe <code>img-thumbnail</code></p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300" class="rounded mx-auto d-block" alt="Image centrée et arrondie">
+                        <p class="mt-2">Image avec classes <code>rounded mx-auto d-block</code></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- SECTION COMPOSANTS -->
+    <section class="container my-5" id="composants">
+        <h2 class="border-bottom pb-2 mb-4">Composants</h2>
+
+        <!-- Carrousel -->
+        <article class="mb-5">
+            <h3>Carrousel</h3>
+            <div class="example-container">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://via.placeholder.com/800x400/007bff/ffffff?text=Slide+1" class="d-block w-100" alt="Slide 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Exemple de carrousel avec <code>carousel slide</code></h5>
+                                <p>Premier slide avec <code>carousel-item active</code></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/800x400/28a745/ffffff?text=Slide+2" class="d-block w-100" alt="Slide 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Deuxième slide</h5>
+                                <p>Slide avec classe <code>carousel-item</code></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/800x400/dc3545/ffffff?text=Slide+3" class="d-block w-100" alt="Slide 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Troisième slide</h5>
+                                <p>Carousel avec contrôles et indicateurs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Suivant</span>
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <p>Le carrousel utilise les classes suivantes :</p>
+                    <ul>
+                        <li><code>carousel slide</code> - Conteneur principal</li>
+                        <li><code>carousel-indicators</code> - Indicateurs de position</li>
+                        <li><code>carousel-inner</code> - Conteneur des slides</li>
+                        <li><code>carousel-item</code> - Chaque slide individuel</li>
+                        <li><code>carousel-caption</code> - Texte superposé sur les slides</li>
+                        <li><code>carousel-control-prev/next</code> - Boutons de navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Accordéon -->
+        <article class="mb-5">
+            <h3>Accordéon</h3>
+            <div class="example-container">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Élément d'accordéon #1 avec <code>accordion-button</code>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Contenu du premier accordéon avec classe <code>accordion-body</code>. Cet élément est ouvert par défaut car il a la classe <code>show</code>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Élément d'accordéon #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Contenu du deuxième accordéon. La classe <code>collapsed</code> sur le bouton indique que cet élément est fermé.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Élément d'accordéon #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Contenu du troisième accordéon. L'attribut <code>data-bs-parent</code> permet de s'assurer qu'un seul élément est ouvert à la fois.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Onglets (Tabs) -->
+        <article class="mb-5">
+            <h3>Onglets (Tabs)</h3>
+            <div class="example-container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                            Onglet 1 avec <code>nav-link active</code>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                            Onglet 2
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+                            Onglet 3
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-3" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <p>Contenu du premier onglet avec les classes <code>tab-pane fade show active</code>. La classe <code>show active</code> le rend visible par défaut.</p>
+                    </div>
+                    <div class="tab-pane fade p-3" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <p>Contenu du deuxième onglet avec la classe <code>tab-pane fade</code>.</p>
+                    </div>
+                    <div class="tab-pane fade p-3" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                        <p>Contenu du troisième onglet. La classe <code>fade</code> ajoute une animation de transition.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Modals (Fenêtres modales) -->
+        <article class="mb-5">
+            <h3>Fenêtres modales (Modals)</h3>
+            <div class="example-container">
+                <!-- Boutons pour ouvrir les différents modals -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ouvrir modal basic
+                </button>
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Modal statique
+                </button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#centeredModal">
+                    Modal centré
+                </button>
+                
+                <!-- Modal Basic -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal avec <code>modal fade</code></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Contenu de la modal avec classe <code>modal-body</code>. La classe <code>fade</code> ajoute une animation.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <button type="button" class="btn btn-primary">Enregistrer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal Static Backdrop -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal avec <code>data-bs-backdrop="static"</code></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Cette modal ne se ferme pas quand on clique à l'extérieur grâce à l'attribut <code>data-bs-backdrop="static"</code>.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal Centered -->
+                <div class="modal fade" id="centeredModal" tabindex="-1" aria-labelledby="centeredModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="centeredModalLabel">Modal avec <code>modal-dialog-centered</code></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Cette modal est centrée verticalement grâce à la classe <code>modal-dialog-centered</code>.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tooltips et Popovers -->
+        <article class="mb-5">
+            <h3>Tooltips et Popovers</h3>
+            <div class="example-container">
+                <!-- Tooltips -->
+                <div class="mb-4">
+                    <h4>Tooltips</h4>
+                    <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip avec data-bs-placement='top'">
+                        Tooltip en haut
+                    </button>
+                    <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip avec data-bs-placement='right'">
+                        Tooltip à droite
+                    </button>
+                    <button type="button" class="btn btn-secondary me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip avec data-bs-placement='bottom'">
+                        Tooltip en bas
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip avec data-bs-placement='left'">
+                        Tooltip à gauche
+                    </button>
+                </div>
+                
+                <!-- Popovers -->
+                <div>
+                    <h4>Popovers</h4>
+                    <button type="button" class="btn btn-lg btn-danger me-2" data-bs-toggle="popover" data-bs-title="Titre du popover" data-bs-content="Contenu du popover avec data-bs-toggle='popover'">
+                        Cliquez pour voir le popover
+                    </button>
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Popover en haut" data-bs-content="Ce popover s'affiche en haut avec data-bs-placement='top'">
+                        Popover en haut
+                    </button>
+                    <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Popover à droite" data-bs-content="Ce popover s'affiche à droite avec data-bs-placement='right'">
+                        Popover à droite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Pagination -->
+        <article class="mb-5">
+            <h3>Pagination</h3>
+            <div class="example-container">
+                <!-- Pagination de base -->
+                <nav aria-label="Exemple de pagination" class="mb-4">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Précédent</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+                    </ul>
+                    <p class="mt-2">Utilise <code>pagination</code> pour le conteneur et <code>page-item</code> et <code>page-link</code> pour les éléments</p>
+                </nav>
+                
+                <!-- Pagination en différentes tailles -->
+                <div class="mb-4">
+                    <h5>Tailles de pagination</h5>
+                    <nav aria-label="Pagination large">
+                        <ul class="pagination pagination-lg mb-3">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                        <p>Avec <code>pagination-lg</code> pour grande taille</p>
+                    </nav>
+                    
+                    <nav aria-label="Pagination petite">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                        <p>Avec <code>pagination-sm</code> pour petite taille</p>
+                    </nav>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Spinners (indicateurs de chargement) -->
+        <article class="mb-5">
+            <h3>Spinners (indicateurs de chargement)</h3>
+            <div class="example-container">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Chargement...</span>
+                </div>
+                <p class="mt-2">Spinner avec <code>spinner-border text-primary</code></p>
+                
+                <div class="mt-3">
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Chargement...</span>
+                    </div>
+                    <p class="mt-2">Spinner avec <code>spinner-grow text-success</code></p>
+                </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Chargement...
+                    </button>
+                    <p class="mt-2">Bouton avec spinner <code>spinner-border-sm</code></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Alertes -->
+        <article class="mb-5">
+            <h3>Alertes</h3>
+            <div class="example-container">
+                <div class="alert alert-primary" role="alert">
+                    Alerte avec <code>alert alert-primary</code>
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                    Alerte avec <code>alert alert-secondary</code>
+                </div>
+                <div class="alert alert-success" role="alert">
+                    Alerte avec <code>alert alert-success</code>
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    Alerte avec <code>alert alert-danger</code>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    Alerte avec <code>alert alert-warning</code>
+                </div>
+                <div class="alert alert-info" role="alert">
+                    Alerte avec <code>alert alert-info</code>
+                </div>
+            </div>
+        </article>
+
+        <!-- Boutons -->
+        <article class="mb-5">
+            <h3>Boutons</h3>
+            <div class="example-container">
+                <button type="button" class="btn btn-primary m-1">btn-primary</button>
+                <button type="button" class="btn btn-secondary m-1">btn-secondary</button>
+                <button type="button" class="btn btn-success m-1">btn-success</button>
+                <button type="button" class="btn btn-danger m-1">btn-danger</button>
+                <button type="button" class="btn btn-warning m-1">btn-warning</button>
+                <button type="button" class="btn btn-info m-1">btn-info</button>
+                <button type="button" class="btn btn-light m-1">btn-light</button>
+                <button type="button" class="btn btn-dark m-1">btn-dark</button>
+                <button type="button" class="btn btn-link m-1">btn-link</button>
+
+                <div class="mt-3">
+                    <button type="button" class="btn btn-outline-primary m-1">btn-outline-primary</button>
+                    <button type="button" class="btn btn-outline-secondary m-1">btn-outline-secondary</button>
+                </div>
+
+                <div class="mt-3">
+                    <button type="button" class="btn btn-primary btn-lg m-1">btn-lg</button>
+                    <button type="button" class="btn btn-primary m-1">bouton normal</button>
+                    <button type="button" class="btn btn-primary btn-sm m-1">btn-sm</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartes -->
+        <article class="mb-5">
+            <h3>Cartes (Cards)</h3>
+            <div class="example-container">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-header">Entête de carte avec <code>card-header</code></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Titre avec <code>card-title</code></h5>
+                                <p class="card-text">Texte avec <code>card-text</code>. Voici un exemple de contenu.</p>
+                                <a href="#" class="btn btn-primary">Bouton</a>
+                            </div>
+                            <div class="card-footer text-muted">Pied de carte avec <code>card-footer</code></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-white bg-primary">
+                            <div class="card-header">Carte avec <code>bg-primary</code></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Titre de la carte</h5>
+                                <p class="card-text">Texte de la carte avec fond coloré.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-success">
+                            <div class="card-header bg-transparent border-success">Carte avec <code>border-success</code></div>
+                            <div class="card-body text-success">
+                                <h5 class="card-title">Titre de la carte</h5>
+                                <p class="card-text">Texte de la carte avec bordure colorée.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success">Pied de carte</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Badges -->
+        <article class="mb-5">
+            <h3>Badges</h3>
+            <div class="example-container">
+                <h4>Badges simples</h4>
+                <div class="mb-3">
+                    <h5>Exemple avec texte <span class="badge bg-primary">Badge primaire</span></h5>
+                    <p>Les badges utilisent la classe <code>badge</code> combinée avec <code>bg-{couleur}</code>.</p>
+                    <button type="button" class="btn btn-primary">
+                        Notifications <span class="badge text-bg-secondary">4</span>
+                    </button>
+                    <button type="button" class="btn btn-success">
+                        Messages <span class="badge text-bg-light">7</span>
+                    </button>
+                </div>
+                
+                <h4 class="mt-4">Badges avec forme</h4>
+                <div>
+                    <span class="badge rounded-pill bg-primary">Badge arrondi</span>
+                    <span class="badge rounded-pill bg-success">Success</span>
+                    <span class="badge rounded-pill bg-danger">Danger</span>
+                    <p class="mt-2">Ajoutez <code>rounded-pill</code> pour obtenir des badges complètement arrondis.</p>
+                </div>
+                
+                <h4 class="mt-4">Badges avec indicateurs de position</h4>
+                <div class="position-relative d-inline-block me-4">
+                    <button type="button" class="btn btn-primary">Profil</button>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">messages non lus</span>
+                    </span>
+                </div>
+                
+                <div class="position-relative d-inline-block">
+                    <button type="button" class="btn btn-dark">Inbox</button>
+                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                        <span class="visually-hidden">Nouveau message</span>
+                    </span>
+                </div>
+                <p class="mt-2">Les badges positionnés utilisent <code>position-absolute</code> avec <code>top-0 start-100 translate-middle</code>.</p>
+            </div>
+        </article>
+        
+        <!-- Barres de recherche -->
+        <article class="mb-5">
+            <h3>Barres de recherche</h3>
+            <div class="example-container">
+                <h4>Barre de recherche simple</h4>
+                <div class="mb-4">
+                    <form class="d-flex" id="simpleSearchForm">
+                        <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Search" id="simpleSearchInput">
+                        <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                    </form>
+                    <div id="simpleSearchResults" class="mt-2 d-none">
+                        <div class="card">
+                            <div class="card-header bg-light">Résultats de recherche</div>
+                            <ul class="list-group list-group-flush" id="simpleResultsList">
+                                <!-- Les résultats seront ajoutés ici dynamiquement -->
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-2">Barre de recherche basique avec <code>form-control</code> et un bouton qui affiche les résultats.</p>
+                </div>
+                
+                <h4>Barre de recherche dans navbar</h4>
+                <div class="mb-4">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Site</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSearch">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Produits</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex" id="navbarSearchForm">
+                                    <div class="position-relative w-100">
+                                        <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search" id="navbarSearchInput">
+                                        <div id="navbarSearchResults" class="position-absolute start-0 w-100 d-none" style="z-index: 1000;">
+                                            <div class="card shadow">
+                                                <div class="list-group list-group-flush" id="navResultsList">
+                                                    <!-- Les résultats seront ajoutés ici dynamiquement -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-primary" type="submit">Rechercher</button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                    <p class="mt-2">Barre de recherche intégrée dans une barre de navigation avec <code>navbar</code> et résultats dynamiques.</p>
+                </div>
+                
+                <h4>Barre de recherche avancée avec autocomplete</h4>
+                <div>
+                    <div class="card">
+                        <div class="card-header bg-light">Recherche avancée</div>
+                        <div class="card-body">
+                            <form id="advancedSearchForm">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-search"></i>🔍</span>
+                                    <input type="text" class="form-control" placeholder="Rechercher..." aria-label="Search" id="advancedSearchInput" autocomplete="off">
+                                    <button class="btn btn-primary" type="submit">Rechercher</button>
+                                </div>
+                                
+                                <div id="autocompleteResults" class="mb-3 d-none">
+                                    <div class="card border-light">
+                                        <div class="list-group list-group-flush" id="autocompleteSuggestions">
+                                            <!-- Les suggestions seront ajoutées ici dynamiquement -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Catégorie</label>
+                                        <select class="form-select" id="searchCategory">
+                                            <option value="">Toutes les catégories</option>
+                                            <option value="components">Composants</option>
+                                            <option value="layout">Mise en page</option>
+                                            <option value="content">Contenu</option>
+                                            <option value="utilities">Utilitaires</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Trier par</label>
+                                        <select class="form-select" id="searchSort">
+                                            <option value="relevance">Pertinence</option>
+                                            <option value="recent">Plus récent</option>
+                                            <option value="name">Nom</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div id="advancedSearchResults" class="mt-3 d-none">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span>Résultats de recherche</span>
+                                <span class="badge bg-primary" id="resultCount">0</span>
+                            </div>
+                            <div class="list-group list-group-flush" id="advancedResultsList">
+                                <!-- Les résultats seront ajoutés ici dynamiquement -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-2">
+                        <p>Cette barre utilise <code>input-group</code> avec JavaScript pour implémenter une fonctionnalité d'autocomplétion réactive.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Graphiques (avec Chart.js) -->
+        <article class="mb-5">
+            <h3>Graphiques</h3>
+            <div class="example-container">
+                <p>Bootstrap n'inclut pas de graphiques nativement, mais s'intègre bien avec des bibliothèques comme Chart.js.</p>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">Graphique en ligne</div>
+                            <div class="card-body">
+                                <canvas id="lineChart" width="400" height="200"></canvas>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Créé avec Chart.js et Bootstrap</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">Graphique en barres</div>
+                            <div class="card-body">
+                                <canvas id="barChart" width="400" height="200"></canvas>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Créé avec Chart.js et Bootstrap</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info">
+                    <h5>Installation de Chart.js</h5>
+                    <p>Pour utiliser les graphiques, vous devez inclure Chart.js :</p>
+                    <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>Puis initialiser vos graphiques dans un script JavaScript :</p>
+                    <pre><code>const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Rouge', 'Bleu', 'Jaune', 'Vert', 'Violet', 'Orange'],
+        datasets: [{
+            label: 'Exemple de données',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    }
+});</code></pre>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Formulaire d'authentification -->
+        <article class="mb-5">
+            <h3>Formulaires d'authentification</h3>
+            <p>Utilisez ces exemples de formulaires pour créer des systèmes d'authentification complets dans vos projets. Cliquez sur "Copier le code" pour obtenir le code HTML des formulaires.</p>
+            <div class="example-container">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <h4>Formulaire de connexion</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Connexion</h5>
+                                <form id="loginForm">
+                                    <div class="mb-3">
+                                        <label for="loginEmail" class="form-label">Adresse email</label>
+                                        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" 
+                                            placeholder="nom@exemple.com" required>
+                                        <div id="emailHelp" class="form-text">Nous ne partagerons jamais votre email.</div>
+                                        <div class="invalid-feedback">Veuillez fournir une adresse email valide.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="loginPassword" class="form-label">Mot de passe</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="loginPassword" 
+                                                placeholder="Votre mot de passe" required>
+                                            <button class="btn btn-outline-secondary" type="button" id="toggleLoginPassword">
+                                                <i class="bi bi-eye">👁️</i>
+                                            </button>
+                                            <div class="invalid-feedback">Veuillez entrer votre mot de passe.</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberCheck">
+                                        <label class="form-check-label" for="rememberCheck">Se souvenir de moi</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="#" class="text-decoration-none" id="forgotPasswordLink">Mot de passe oublié?</a>
+                                        <a href="#" class="text-decoration-none" id="createAccountLink">Créer un compte</a>
+                                    </div>
+                                    <div id="loginStatusMessage" class="mt-3 d-none"></div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="loginFormCode">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                    </svg>
+                                    Copier le code HTML
+                                </button>
+                                <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Code HTML à copier (caché) -->
+                        <div class="d-none">
+                            <pre id="loginFormCode" class="code-to-copy"><code class="language-html">&lt;!-- Formulaire de connexion --&gt;
+&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title mb-4"&gt;Connexion&lt;/h5&gt;
+        &lt;form id="loginForm"&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="loginEmail" class="form-label"&gt;Adresse email&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" 
+                    placeholder="nom@exemple.com" required&gt;
+                &lt;div id="emailHelp" class="form-text"&gt;Nous ne partagerons jamais votre email.&lt;/div&gt;
+                &lt;div class="invalid-feedback"&gt;Veuillez fournir une adresse email valide.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="loginPassword" class="form-label"&gt;Mot de passe&lt;/label&gt;
+                &lt;div class="input-group"&gt;
+                    &lt;input type="password" class="form-control" id="loginPassword" 
+                        placeholder="Votre mot de passe" required&gt;
+                    &lt;button class="btn btn-outline-secondary" type="button" id="toggleLoginPassword"&gt;
+                        &lt;i class="bi bi-eye"&gt;👁️&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;div class="invalid-feedback"&gt;Veuillez entrer votre mot de passe.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3 form-check"&gt;
+                &lt;input type="checkbox" class="form-check-input" id="rememberCheck"&gt;
+                &lt;label class="form-check-label" for="rememberCheck"&gt;Se souvenir de moi&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary w-100"&gt;Se connecter&lt;/button&gt;
+            &lt;div class="d-flex justify-content-between mt-3"&gt;
+                &lt;a href="#" class="text-decoration-none" id="forgotPasswordLink"&gt;Mot de passe oublié?&lt;/a&gt;
+                &lt;a href="#" class="text-decoration-none" id="createAccountLink"&gt;Créer un compte&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div id="loginStatusMessage" class="mt-3 d-none"&gt;&lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script pour afficher/masquer le mot de passe --&gt;
+&lt;script&gt;
+document.getElementById('toggleLoginPassword').addEventListener('click', function() {
+    const passwordInput = document.getElementById('loginPassword');
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    // Changer l'icône
+    const icon = this.querySelector('i');
+    if (icon) {
+        if (type === 'text') {
+            icon.innerHTML = '👁️‍🗨️'; // Œil barré
+        } else {
+            icon.innerHTML = '👁️'; // Œil normal
+        }
+    }
+});
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <h4>Formulaire d'inscription</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Créer un compte</h5>
+                                <form id="registerForm" class="row g-3 needs-validation" novalidate>
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">Prénom</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez entrer votre prénom.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Nom</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez entrer votre nom.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="registerEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="registerEmail" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez fournir une adresse email valide.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="registerPassword" class="form-label">Mot de passe</label>
+                                        <div class="input-group has-validation">
+                                            <input type="password" class="form-control" id="registerPassword" 
+                                                aria-describedby="passwordRequirements" required>
+                                            <button class="btn btn-outline-secondary" type="button" id="toggleRegisterPassword">
+                                                <i class="bi bi-eye">👁️</i>
+                                            </button>
+                                            <div class="invalid-feedback">
+                                                Le mot de passe doit contenir au moins 8 caractères.
+                                            </div>
+                                        </div>
+                                        <div id="passwordRequirements" class="form-text">
+                                            Votre mot de passe doit contenir 8-20 caractères, incluant des lettres, chiffres et symboles.
+                                        </div>
+                                        <div id="passwordStrength" class="mt-2 d-none">
+                                            <label class="form-label mb-1">Force du mot de passe:</label>
+                                            <div class="progress" style="height: 5px;">
+                                                <div id="passwordStrengthBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <small id="passwordStrengthText" class="form-text"></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="confirmPassword" class="form-label">Confirmer le mot de passe</label>
+                                        <input type="password" class="form-control" id="confirmPassword" required>
+                                        <div class="invalid-feedback" id="confirmPasswordFeedback">
+                                            Les mots de passe ne correspondent pas.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                            <label class="form-check-label" for="termsCheck">
+                                                J'accepte les <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">conditions d'utilisation</a>
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                Vous devez accepter les conditions avant de vous inscrire.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
+                                    </div>
+                                    <div id="registerStatusMessage" class="col-12 mt-3 d-none"></div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="registerFormCode">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                    </svg>
+                                    Copier le code HTML
+                                </button>
+                                <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Code HTML à copier (caché) -->
+                        <div class="d-none">
+                            <pre id="registerFormCode" class="code-to-copy"><code class="language-html">&lt;!-- Formulaire d'inscription --&gt;
+&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title mb-4"&gt;Créer un compte&lt;/h5&gt;
+        &lt;form id="registerForm" class="row g-3 needs-validation" novalidate&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;label for="firstName" class="form-label"&gt;Prénom&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="firstName" required&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Veuillez entrer votre prénom.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;label for="lastName" class="form-label"&gt;Nom&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="lastName" required&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Veuillez entrer votre nom.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-12"&gt;
+                &lt;label for="registerEmail" class="form-label"&gt;Email&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="registerEmail" required&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Veuillez fournir une adresse email valide.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;label for="registerPassword" class="form-label"&gt;Mot de passe&lt;/label&gt;
+                &lt;div class="input-group has-validation"&gt;
+                    &lt;input type="password" class="form-control" id="registerPassword" 
+                        aria-describedby="passwordRequirements" required&gt;
+                    &lt;button class="btn btn-outline-secondary" type="button" id="toggleRegisterPassword"&gt;
+                        &lt;i class="bi bi-eye"&gt;👁️&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;div class="invalid-feedback"&gt;
+                        Le mot de passe doit contenir au moins 8 caractères.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div id="passwordRequirements" class="form-text"&gt;
+                    Votre mot de passe doit contenir 8-20 caractères, incluant des lettres, chiffres et symboles.
+                &lt;/div&gt;
+                &lt;div id="passwordStrength" class="mt-2 d-none"&gt;
+                    &lt;label class="form-label mb-1"&gt;Force du mot de passe:&lt;/label&gt;
+                    &lt;div class="progress" style="height: 5px;"&gt;
+                        &lt;div id="passwordStrengthBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;small id="passwordStrengthText" class="form-text"&gt;&lt;/small&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;label for="confirmPassword" class="form-label"&gt;Confirmer le mot de passe&lt;/label&gt;
+                &lt;input type="password" class="form-control" id="confirmPassword" required&gt;
+                &lt;div class="invalid-feedback" id="confirmPasswordFeedback"&gt;
+                    Les mots de passe ne correspondent pas.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-12"&gt;
+                &lt;div class="form-check"&gt;
+                    &lt;input class="form-check-input" type="checkbox" id="termsCheck" required&gt;
+                    &lt;label class="form-check-label" for="termsCheck"&gt;
+                        J'accepte les &lt;a href="#" data-bs-toggle="modal" data-bs-target="#termsModal"&gt;conditions d'utilisation&lt;/a&gt;
+                    &lt;/label&gt;
+                    &lt;div class="invalid-feedback"&gt;
+                        Vous devez accepter les conditions avant de vous inscrire.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-12"&gt;
+                &lt;button type="submit" class="btn btn-primary w-100"&gt;S'inscrire&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div id="registerStatusMessage" class="col-12 mt-3 d-none"&gt;&lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script pour la vérification du mot de passe et affichage/masquage --&gt;
+&lt;script&gt;
+// Afficher/masquer le mot de passe
+document.getElementById('toggleRegisterPassword').addEventListener('click', function() {
+    const passwordInput = document.getElementById('registerPassword');
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    // Changer l'icône
+    const icon = this.querySelector('i');
+    if (icon) {
+        if (type === 'text') {
+            icon.innerHTML = '👁️‍🗨️'; // Œil barré
+        } else {
+            icon.innerHTML = '👁️'; // Œil normal
+        }
+    }
+});
+
+// Vérifier la force du mot de passe
+const registerPassword = document.getElementById('registerPassword');
+if (registerPassword) {
+    registerPassword.addEventListener('input', function() {
+        const password = this.value;
+        const strengthBar = document.getElementById('passwordStrengthBar');
+        const strengthText = document.getElementById('passwordStrengthText');
+        const strengthSection = document.getElementById('passwordStrength');
+        
+        if (!strengthBar || !strengthText || !strengthSection) return;
+        
+        // Afficher la section de force du mot de passe
+        strengthSection.classList.remove('d-none');
+        
+        // Évaluer la force du mot de passe
+        let strength = 0;
+        let feedback = '';
+        
+        if (password.length >= 8) strength += 25;
+        if (password.match(/[A-Z]/)) strength += 25;
+        if (password.match(/[0-9]/)) strength += 25;
+        if (password.match(/[^A-Za-z0-9]/)) strength += 25;
+        
+        // Mettre à jour la barre de progression
+        strengthBar.style.width = `${strength}%`;
+        strengthBar.setAttribute('aria-valuenow', strength);
+        
+        // Mettre à jour le texte d'information
+        if (strength <= 25) {
+            strengthBar.className = 'progress-bar bg-danger';
+            feedback = 'Très faible';
+        } else if (strength <= 50) {
+            strengthBar.className = 'progress-bar bg-warning';
+            feedback = 'Faible';
+        } else if (strength <= 75) {
+            strengthBar.className = 'progress-bar bg-info';
+            feedback = 'Moyen';
+        } else {
+            strengthBar.className = 'progress-bar bg-success';
+            feedback = 'Fort';
+        }
+        
+        strengthText.textContent = feedback;
+    });
+}
+
+// Vérifier la correspondance des mots de passe
+const confirmPassword = document.getElementById('confirmPassword');
+if (confirmPassword) {
+    confirmPassword.addEventListener('input', function() {
+        const password = document.getElementById('registerPassword').value;
+        const confirmPasswordFeedback = document.getElementById('confirmPasswordFeedback');
+        
+        if (this.value !== password) {
+            this.classList.add('is-invalid');
+            if (confirmPasswordFeedback) {
+                confirmPasswordFeedback.textContent = 'Les mots de passe ne correspondent pas.';
+            }
+        } else {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        }
+    });
+}
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h4>Récupération de mot de passe</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="passwordResetForm">
+                                <div class="mb-3">
+                                    <label for="resetEmail" class="form-label">Adresse email pour réinitialiser votre mot de passe</label>
+                                    <input type="email" class="form-control" id="resetEmail" placeholder="nom@exemple.com" required>
+                                    <div class="invalid-feedback">
+                                        Veuillez fournir une adresse email valide.
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-none" id="securityQuestionSection">
+                                    <label for="securityQuestion" class="form-label">Question de sécurité</label>
+                                    <select class="form-select" id="securityQuestion" required disabled>
+                                        <option value="" selected disabled>Choisissez une question...</option>
+                                        <option value="pet">Quel était le nom de votre premier animal de compagnie?</option>
+                                        <option value="school">Dans quelle école primaire êtes-vous allé?</option>
+                                        <option value="mother">Quel est le nom de jeune fille de votre mère?</option>
+                                        <option value="city">Dans quelle ville êtes-vous né?</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Veuillez sélectionner une question de sécurité.
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-none" id="securityAnswerSection">
+                                    <label for="securityAnswer" class="form-label">Votre réponse</label>
+                                    <input type="text" class="form-control" id="securityAnswer" disabled required>
+                                    <div class="invalid-feedback">
+                                        Veuillez fournir une réponse.
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-none" id="newPasswordSection">
+                                    <label for="newPassword" class="form-label">Nouveau mot de passe</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="newPassword" disabled required>
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleNewPassword" disabled>
+                                            <i class="bi bi-eye">👁️</i>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Le mot de passe doit contenir au moins 8 caractères.
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-none" id="confirmNewPasswordSection">
+                                    <label for="confirmNewPassword" class="form-label">Confirmez le nouveau mot de passe</label>
+                                    <input type="password" class="form-control" id="confirmNewPassword" disabled required>
+                                    <div class="invalid-feedback">
+                                        Les mots de passe ne correspondent pas.
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="resetPasswordBtn">Envoyer un lien de réinitialisation</button>
+                                <button type="button" class="btn btn-secondary d-none" id="resetPasswordCancelBtn">Annuler</button>
+                                <div id="resetStatusMessage" class="mt-3 d-none"></div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm btn-outline-secondary copy-code-btn" data-code-target="resetPasswordFormCode">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard me-1" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                </svg>
+                                Copier le code HTML
+                            </button>
+                            <span class="copy-success-message text-success ms-2" style="display: none;">Copié !</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Code HTML à copier (caché) -->
+                    <div class="d-none">
+                        <pre id="resetPasswordFormCode" class="code-to-copy"><code class="language-html">&lt;!-- Formulaire de récupération de mot de passe --&gt;
+&lt;div class="card"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;form id="passwordResetForm"&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="resetEmail" class="form-label"&gt;Adresse email pour réinitialiser votre mot de passe&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="resetEmail" placeholder="nom@exemple.com" required&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Veuillez fournir une adresse email valide.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3 d-none" id="securityQuestionSection"&gt;
+                &lt;label for="securityQuestion" class="form-label"&gt;Question de sécurité&lt;/label&gt;
+                &lt;select class="form-select" id="securityQuestion" required disabled&gt;
+                    &lt;option value="" selected disabled&gt;Choisissez une question...&lt;/option&gt;
+                    &lt;option value="pet"&gt;Quel était le nom de votre premier animal de compagnie?&lt;/option&gt;
+                    &lt;option value="school"&gt;Dans quelle école primaire êtes-vous allé?&lt;/option&gt;
+                    &lt;option value="mother"&gt;Quel est le nom de jeune fille de votre mère?&lt;/option&gt;
+                    &lt;option value="city"&gt;Dans quelle ville êtes-vous né?&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Veuillez sélectionner une question de sécurité.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3 d-none" id="securityAnswerSection"&gt;
+                &lt;label for="securityAnswer" class="form-label"&gt;Votre réponse&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="securityAnswer" disabled required&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Veuillez fournir une réponse.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3 d-none" id="newPasswordSection"&gt;
+                &lt;label for="newPassword" class="form-label"&gt;Nouveau mot de passe&lt;/label&gt;
+                &lt;div class="input-group"&gt;
+                    &lt;input type="password" class="form-control" id="newPassword" disabled required&gt;
+                    &lt;button class="btn btn-outline-secondary" type="button" id="toggleNewPassword" disabled&gt;
+                        &lt;i class="bi bi-eye"&gt;👁️&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Le mot de passe doit contenir au moins 8 caractères.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3 d-none" id="confirmNewPasswordSection"&gt;
+                &lt;label for="confirmNewPassword" class="form-label"&gt;Confirmez le nouveau mot de passe&lt;/label&gt;
+                &lt;input type="password" class="form-control" id="confirmNewPassword" disabled required&gt;
+                &lt;div class="invalid-feedback"&gt;
+                    Les mots de passe ne correspondent pas.
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="btn btn-primary" id="resetPasswordBtn"&gt;Envoyer un lien de réinitialisation&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary d-none" id="resetPasswordCancelBtn"&gt;Annuler&lt;/button&gt;
+            &lt;div id="resetStatusMessage" class="mt-3 d-none"&gt;&lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Script pour le processus de réinitialisation par étapes --&gt;
+&lt;script&gt;
+// Gérer la soumission du formulaire
+document.getElementById('passwordResetForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const resetEmail = document.getElementById('resetEmail');
+    
+    if (!resetEmail.value || !resetEmail.checkValidity()) {
+        resetEmail.classList.add('is-invalid');
+        return;
+    }
+    
+    resetEmail.classList.add('is-valid');
+    
+    // Simuler la vérification de l'email
+    // Dans un cas réel, vous feriez une requête au serveur
+    
+    // Afficher la section de question de sécurité
+    const securityQuestionSection = document.getElementById('securityQuestionSection');
+    securityQuestionSection.classList.remove('d-none');
+    document.getElementById('securityQuestion').disabled = false;
+    
+    // Changer le texte du bouton
+    document.getElementById('resetPasswordBtn').textContent = 'Vérifier';
+    document.getElementById('resetPasswordCancelBtn').classList.remove('d-none');
+    
+    // Afficher un message d'information
+    const statusMessage = document.createElement('div');
+    statusMessage.className = 'alert alert-info mt-3';
+    statusMessage.textContent = 'Email trouvé. Veuillez répondre à la question de sécurité.';
+    document.getElementById('resetStatusMessage').innerHTML = '';
+    document.getElementById('resetStatusMessage').appendChild(statusMessage);
+    document.getElementById('resetStatusMessage').classList.remove('d-none');
+});
+
+// Gérer le bouton d'annulation
+document.getElementById('resetPasswordCancelBtn').addEventListener('click', function() {
+    // Réinitialiser le formulaire
+    document.getElementById('passwordResetForm').reset();
+    
+    // Cacher les sections supplémentaires
+    document.getElementById('securityQuestionSection').classList.add('d-none');
+    document.getElementById('securityAnswerSection').classList.add('d-none');
+    document.getElementById('newPasswordSection').classList.add('d-none');
+    document.getElementById('confirmNewPasswordSection').classList.add('d-none');
+    
+    // Réinitialiser le bouton
+    document.getElementById('resetPasswordBtn').textContent = 'Envoyer un lien de réinitialisation';
+    this.classList.add('d-none');
+    
+    // Cacher le message d'état
+    document.getElementById('resetStatusMessage').classList.add('d-none');
+});
+&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+                
+                <!-- Modal des conditions d'utilisation -->
+                <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="termsModalLabel">Conditions d'utilisation</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>1. Acceptation des conditions</h6>
+                                <p>En utilisant ce service, vous acceptez d'être lié par ces conditions. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre service.</p>
+                                
+                                <h6>2. Description du service</h6>
+                                <p>Ce service est fourni à titre d'exemple pour la documentation Bootstrap et ne constitue pas un véritable service d'authentification.</p>
+                                
+                                <h6>3. Confidentialité</h6>
+                                <p>Nous respectons votre vie privée et ne recueillons aucune information personnelle réelle via cette démonstration.</p>
+                                
+                                <h6>4. Sécurité du compte</h6>
+                                <p>Dans un véritable système, vous seriez responsable de maintenir la confidentialité de votre mot de passe.</p>
+                                
+                                <p>Ces conditions sont fournies uniquement à titre d'exemple et n'ont aucune validité juridique.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <button type="button" class="btn btn-primary" id="acceptTermsBtn" data-bs-dismiss="modal">J'accepte</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-4">
+                    <h5>Validation des formulaires</h5>
+                    <p>Bootstrap offre des styles de validation intégrés avec les classes <code>is-valid</code> et <code>is-invalid</code> :</p>
+                    <pre><code>&lt;input type="email" class="form-control is-invalid" id="invalidEmail"&gt;
+&lt;div class="invalid-feedback"&gt;
+  Veuillez fournir un email valide.
+&lt;/div&gt;</code></pre>
+                    <p>Pour une validation côté client, vous pouvez utiliser l'attribut <code>required</code> et les classes <code>needs-validation</code> avec l'attribut <code>novalidate</code> sur le formulaire.</p>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Menus déroulants et navigation -->
+        <article class="mb-5">
+            <h3>Menus déroulants et navigation avancée</h3>
+            <div class="example-container">
+                <h4>Menu déroulant (Dropdown)</h4>
+                <div class="mb-4">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu déroulant
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Autre action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Élément séparé</a></li>
+                        </ul>
+                    </div>
+                    <p class="mt-2">Utilise <code>dropdown</code>, <code>dropdown-toggle</code>, et <code>dropdown-menu</code>.</p>
+                </div>
+                
+                <h4>Navigation à onglets avec dropdown</h4>
+                <div class="mb-4">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Paramètres</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Compte</a></li>
+                                <li><a class="dropdown-item" href="#">Sécurité</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <h4>Navigation latérale (Sidebar)</h4>
+                <div class="mb-3">
+                    <div class="d-flex">
+                        <div class="border rounded p-3 bg-light" style="width: 200px;">
+                            <h6>Menu latéral</h6>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">Tableau de bord</a>
+                                <a href="#" class="list-group-item list-group-item-action">Utilisateurs</a>
+                                <a href="#" class="list-group-item list-group-item-action">Produits</a>
+                                <a href="#" class="list-group-item list-group-item-action">Statistiques</a>
+                                <a href="#" class="list-group-item list-group-item-action">Paramètres</a>
+                            </div>
+                        </div>
+                        <div class="border rounded p-3 ms-3 flex-grow-1">
+                            <h5>Contenu principal</h5>
+                            <p>Ceci est un exemple de mise en page avec barre latérale. Utilisez des classes comme <code>d-flex</code> pour créer une mise en page à colonnes flexibles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Alerte et notifications -->
+        <article class="mb-5">
+            <h3>Alertes et notifications avancées</h3>
+            <div class="example-container">
+                <h4>Toasts (Notifications temporaires)</h4>
+                <div class="mb-4">
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <strong class="me-auto">Bootstrap</strong>
+                            <small>Il y a 11 minutes</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Notification avec <code>toast</code> et <code>toast-header</code>.
+                        </div>
+                    </div>
+                    <p class="mt-2">Les toasts sont des alertes légères pour afficher des notifications temporaires.</p>
+                </div>
+                
+                <h4>Alerte avec fermeture</h4>
+                <div class="mb-4">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Attention!</strong> Vous avez des mises à jour en attente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <p>Utilisez <code>alert-dismissible</code> avec un bouton de fermeture <code>btn-close</code>.</p>
+                </div>
+                
+                <h4>Icônes et contenu personnalisé</h4>
+                <div>
+                    <div class="alert alert-primary d-flex align-items-center" role="alert">
+                        <div class="fs-4 me-2">ℹ️</div>
+                        <div>
+                            Une alerte informative avec icône personnalisée.
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <div class="fs-4 me-2">✅</div>
+                        <div>
+                            Votre profil a été mis à jour avec succès!
+                            <hr>
+                            <p class="mb-0">Les alertes peuvent contenir des éléments HTML comme <a href="#" class="alert-link">des liens</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- SECTION STYLES -->
+    <section class="container my-5" id="styles">
+        <h2 class="border-bottom pb-2 mb-4">Styles Bootstrap</h2>
+        
+        <!-- Introduction aux styles Bootstrap -->
+        <article class="mb-5">
+            <h3>Introduction aux styles Bootstrap</h3>
+            <div class="example-container">
+                <p>Bootstrap utilise un système de classes CSS pour appliquer des styles prédéfinis aux éléments HTML. Chaque classe a une fonction spécifique et peut être combinée avec d'autres classes.</p>
+                
+                <div class="alert alert-info">
+                    <strong>Conseil :</strong> Vous pouvez combiner plusieurs classes Bootstrap sur un même élément pour cumuler leurs effets.
+                </div>
+                
+                <h4 class="mt-4">Anatomie d'une classe Bootstrap</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Format</th>
+                                <th>Exemple</th>
+                                <th>Explication</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>{propriété}</code></td>
+                                <td><code>bold</code></td>
+                                <td>Applique directement une propriété (texte en gras)</td>
+                            </tr>
+                            <tr>
+                                <td><code>{propriété}-{valeur}</code></td>
+                                <td><code>text-center</code></td>
+                                <td>Applique une valeur spécifique à une propriété (centrage du texte)</td>
+                            </tr>
+                            <tr>
+                                <td><code>{propriété}-{breakpoint}-{valeur}</code></td>
+                                <td><code>d-md-none</code></td>
+                                <td>Applique une valeur conditionnelle à partir d'un certain point d'arrêt (masquer à partir du breakpoint md)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Système de style des couleurs -->
+        <article class="mb-5">
+            <h3>Système de couleurs</h3>
+            <div class="example-container">
+                <p>Bootstrap définit un ensemble de couleurs thématiques qui peuvent être appliquées de manière cohérente à travers votre site.</p>
+                
+                <h4 class="mt-3">Couleurs thématiques</h4>
+                <div class="row g-2">
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-primary text-white">primary</div>
+                        <p class="small mt-1">Couleur principale, utilisée pour les actions principales et éléments importants</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-secondary text-white">secondary</div>
+                        <p class="small mt-1">Couleur secondaire, utilisée pour les actions complémentaires</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-success text-white">success</div>
+                        <p class="small mt-1">Indique un résultat positif ou une action réussie</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-danger text-white">danger</div>
+                        <p class="small mt-1">Indique une erreur ou une action négative</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-warning text-dark">warning</div>
+                        <p class="small mt-1">Avertissement ou attention requise</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-info text-dark">info</div>
+                        <p class="small mt-1">Information ou contexte supplémentaire</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-light text-dark">light</div>
+                        <p class="small mt-1">Fond clair, souvent utilisé pour les arrère-plans</p>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <div class="p-3 bg-dark text-white">dark</div>
+                        <p class="small mt-1">Fond foncé, utilisé pour le contraste élevé</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-4">Application des couleurs</h4>
+                <p>Les couleurs peuvent être appliquées à différents aspects :</p>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <h5>Texte</h5>
+                        <p class="text-primary">text-primary</p>
+                        <p class="text-danger">text-danger</p>
+                        <p><code>text-{couleur}</code></p>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5>Arrière-plan</h5>
+                        <p class="bg-secondary text-white p-2">bg-secondary</p>
+                        <p class="bg-info p-2">bg-info</p>
+                        <p><code>bg-{couleur}</code></p>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5>Bordures</h5>
+                        <div class="border border-success p-2 mb-2">border-success</div>
+                        <div class="border border-primary p-2">border-primary</div>
+                        <p><code>border-{couleur}</code></p>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5>Boutons</h5>
+                        <button class="btn btn-warning mb-2">btn-warning</button>
+                        <button class="btn btn-outline-danger">btn-outline-danger</button>
+                        <p><code>btn-{couleur}</code></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Classes de typographie -->
+        <article class="mb-5">
+            <h3>Typographie</h3>
+            <div class="example-container">
+                <h4>Styles de texte</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="fw-bold">Texte en gras avec <code>fw-bold</code></p>
+                        <p class="fw-light">Texte léger avec <code>fw-light</code></p>
+                        <p class="fst-italic">Texte en italique avec <code>fst-italic</code></p>
+                        <p class="text-decoration-underline">Texte souligné avec <code>text-decoration-underline</code></p>
+                        <p class="text-decoration-line-through">Texte barré avec <code>text-decoration-line-through</code></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-uppercase">Texte en majuscules avec <code>text-uppercase</code></p>
+                        <p class="text-lowercase">TEXTE EN MINUSCULES avec <code>text-lowercase</code></p>
+                        <p class="text-capitalize">texte avec premières lettres en majuscules avec <code>text-capitalize</code></p>
+                        <p class="font-monospace">Texte monospace avec <code>font-monospace</code></p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-4">Alignement de texte</h4>
+                <p class="text-start">Texte aligné à gauche avec <code>text-start</code></p>
+                <p class="text-center">Texte centré avec <code>text-center</code></p>
+                <p class="text-end">Texte aligné à droite avec <code>text-end</code></p>
+                <p class="text-sm-start text-md-center text-lg-end">Alignement responsive (gauche sur petit écran, centré sur moyen, droite sur grand)</p>
+                
+                <h4 class="mt-4">Tailles de texte</h4>
+                <p class="fs-1">Texte très grand avec <code>fs-1</code></p>
+                <p class="fs-3">Texte grand avec <code>fs-3</code></p>
+                <p class="fs-6">Texte plus petit avec <code>fs-6</code></p>
+            </div>
+        </article>
+        
+        <!-- Personnalisation de styles -->
+        <article class="mb-5">
+            <h3>Personnalisation des styles</h3>
+            <div class="example-container">
+                <h4>Variables CSS (Mode sombre/clair)</h4>
+                <div class="p-3 mb-3 border rounded bg-light">
+                    <pre class="m-0"><code>/* Dans votre fichier CSS personnalisé */
+:root {
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  /* Autres variables... */
+}</code></pre>
+                    <p class="mt-2">Bootstrap utilise des variables CSS que vous pouvez remplacer pour personnaliser les couleurs, les espacements, etc.</p>
+                </div>
+                
+                <h4>Utiliser Sass pour une personnalisation avancée</h4>
+                <div class="p-3 mb-3 border rounded bg-light">
+                    <pre class="m-0"><code>// Fichier SCSS personnalisé
+$primary: #3490dc;      // Changer la couleur primaire
+$border-radius: 0.5rem; // Arrondir davantage les coins
+
+// Importer Bootstrap après vos variables
+@import "~bootstrap/scss/bootstrap";</code></pre>
+                </div>
+                
+                <div class="alert alert-warning mt-3">
+                    <strong>Important :</strong> Pour utiliser Sass avec Bootstrap, vous aurez besoin d'un outil de compilation comme webpack, Gulp ou l'extension live Sass compiler dans VS Code.
+                </div>
+            </div>
+        </article>
+        
+        <!-- Propriétés natives par élément -->
+        <article class="mb-5">
+            <h3>Propriétés natives par élément</h3>
+            <div class="example-container">
+                <p>Certains éléments HTML bénéficient de styles par défaut dans Bootstrap, même sans classes spécifiques.</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Élément HTML</th>
+                                <th>Propriétés Bootstrap natives</th>
+                                <th>Utilité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;body&gt;</code></td>
+                                <td>font-family, line-height, color, margin</td>
+                                <td>Définit la typographie de base et supprime les marges par défaut</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></td>
+                                <td>margin-top, margin-bottom, font-weight, line-height</td>
+                                <td>Style hiérarchique pour les titres avec espacement approprié</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;p&gt;</code></td>
+                                <td>margin-top, margin-bottom</td>
+                                <td>Espacement vertical cohérent entre paragraphes</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;a&gt;</code></td>
+                                <td>color, text-decoration, hover state</td>
+                                <td>Style distinctif pour les liens avec interaction au survol</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code></td>
+                                <td>padding-left, margin-top, margin-bottom</td>
+                                <td>Mise en retrait appropriée pour les listes</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;table&gt;</code></td>
+                                <td>border-collapse, width</td>
+                                <td>Tables propres par défaut (mais nécessite des classes pour un style complet)</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;input&gt;</code>, <code>&lt;button&gt;</code></td>
+                                <td>font-family, font-size, line-height, padding</td>
+                                <td>Normalise les contrôles de formulaire entre navigateurs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="alert alert-info mt-3">
+                    <p class="mb-0">Bootstrap applique également un <code>box-sizing: border-box</code> à tous les éléments, ce qui facilite le calcul des dimensions en incluant padding et bordures.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Approche mobile-first -->
+        <article class="mb-5">
+            <h3>Approche Mobile-First</h3>
+            <div class="example-container">
+                <p>Bootstrap utilise une approche "mobile-first" pour ses styles, ce qui signifie que les styles sont d'abord conçus pour les petits écrans, puis adaptables aux écrans plus grands via des media queries.</p>
+                
+                <h4>Points d'arrêt (Breakpoints)</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Breakpoint</th>
+                                <th>Classe préfixe</th>
+                                <th>Dimensions</th>
+                                <th>Appareils typiques</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Extra small</td>
+                                <td><code>None</code> (défaut)</td>
+                                <td>&lt;576px</td>
+                                <td>Téléphones portrait</td>
+                            </tr>
+                            <tr>
+                                <td>Small</td>
+                                <td><code>sm</code></td>
+                                <td>≥576px</td>
+                                <td>Téléphones paysage</td>
+                            </tr>
+                            <tr>
+                                <td>Medium</td>
+                                <td><code>md</code></td>
+                                <td>≥768px</td>
+                                <td>Tablettes</td>
+                            </tr>
+                            <tr>
+                                <td>Large</td>
+                                <td><code>lg</code></td>
+                                <td>≥992px</td>
+                                <td>Ordinateurs portables</td>
+                            </tr>
+                            <tr>
+                                <td>Extra large</td>
+                                <td><code>xl</code></td>
+                                <td>≥1200px</td>
+                                <td>Écrans d'ordinateurs</td>
+                            </tr>
+                            <tr>
+                                <td>Extra extra large</td>
+                                <td><code>xxl</code></td>
+                                <td>≥1400px</td>
+                                <td>Grands écrans</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4 class="mt-4">Exemple d'utilisation des breakpoints</h4>
+                <div class="p-3 border rounded">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 mb-3 bg-light p-2">
+                            <code>col-12 col-md-6 col-lg-4</code>
+                            <p class="small">Prend 100% de largeur sur mobile, 50% sur tablette, 33% sur écrans larges</p>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 mb-3 bg-light p-2">
+                            <code>col-12 col-md-6 col-lg-4</code>
+                            <p class="small">Prend 100% de largeur sur mobile, 50% sur tablette, 33% sur écrans larges</p>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4 mb-3 bg-light p-2">
+                            <code>col-12 col-md-12 col-lg-4</code>
+                            <p class="small">Prend 100% de largeur sur mobile et tablette, 33% sur écrans larges</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- SECTION UTILITAIRES -->
+    <section class="container my-5" id="utilitaires">
+        <h2 class="border-bottom pb-2 mb-4">Utilitaires</h2>
+
+        <!-- Espacements -->
+        <article class="mb-5">
+            <h3>Espacements</h3>
+            <div class="example-container">
+                <div class="p-0 border mb-2">p-0 (padding: 0)</div>
+                <div class="p-1 border mb-2">p-1 (padding: 0.25rem)</div>
+                <div class="p-2 border mb-2">p-2 (padding: 0.5rem)</div>
+                <div class="p-3 border mb-2">p-3 (padding: 1rem)</div>
+                <div class="p-4 border mb-2">p-4 (padding: 1.5rem)</div>
+                <div class="p-5 border mb-2">p-5 (padding: 3rem)</div>
+
+                <div class="m-0 border bg-light mb-2">m-0 (margin: 0)</div>
+                <div class="m-1 border bg-light mb-2">m-1 (margin: 0.25rem)</div>
+                <div class="m-2 border bg-light mb-2">m-2 (margin: 0.5rem)</div>
+                <div class="m-3 border bg-light mb-2">m-3 (margin: 1rem)</div>
+                <div class="m-4 border bg-light mb-2">m-4 (margin: 1.5rem)</div>
+                <div class="m-5 border bg-light mb-2">m-5 (margin: 3rem)</div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pt-3 border mb-2">pt-3 (padding-top: 1rem)</div>
+                        <div class="pe-3 border mb-2">pe-3 (padding-right: 1rem)</div>
+                        <div class="pb-3 border mb-2">pb-3 (padding-bottom: 1rem)</div>
+                        <div class="ps-3 border mb-2">ps-3 (padding-left: 1rem)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mt-3 border bg-light mb-2">mt-3 (margin-top: 1rem)</div>
+                        <div class="me-3 border bg-light mb-2">me-3 (margin-right: 1rem)</div>
+                        <div class="mb-3 border bg-light mb-2">mb-3 (margin-bottom: 1rem)</div>
+                        <div class="ms-3 border bg-light mb-2">ms-3 (margin-left: 1rem)</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Couleurs -->
+        <article class="mb-5">
+            <h3>Couleurs</h3>
+            <div class="example-container">
+                <div class="p-3 mb-2 bg-primary text-white">bg-primary</div>
+                <div class="p-3 mb-2 bg-secondary text-white">bg-secondary</div>
+                <div class="p-3 mb-2 bg-success text-white">bg-success</div>
+                <div class="p-3 mb-2 bg-danger text-white">bg-danger</div>
+                <div class="p-3 mb-2 bg-warning text-dark">bg-warning</div>
+                <div class="p-3 mb-2 bg-info text-dark">bg-info</div>
+                <div class="p-3 mb-2 bg-light text-dark">bg-light</div>
+                <div class="p-3 mb-2 bg-dark text-white">bg-dark</div>
+            </div>
+        </article>
+
+        <!-- Affichage -->
+        <article class="mb-5">
+            <h3>Affichage (Display)</h3>
+            <div class="example-container">
+                <div class="d-inline p-2 bg-primary text-white m-1">d-inline</div>
+                <div class="d-inline p-2 bg-secondary text-white m-1">d-inline</div>
+
+                <div class="d-block p-2 bg-primary text-white m-1">d-block</div>
+                <div class="d-block p-2 bg-secondary text-white m-1">d-block</div>
+
+                <div class="d-none d-md-block p-2 bg-success text-white m-1">d-none d-md-block (visible à partir de md)</div>
+                <div class="d-md-none p-2 bg-danger text-white m-1">d-md-none (caché à partir de md)</div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="container-fluid bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Documentation Visuelle Bootstrap | Classes et exemples pour mieux comprendre</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour la fonctionnalité copier le code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionner tous les boutons de copie
+            const copyButtons = document.querySelectorAll('.copy-code-btn');
+            
+            // Ajouter l'écouteur d'événement à chaque bouton
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Trouver l'élément contenant le code à copier
+                    const codeTarget = this.getAttribute('data-code-target');
+                    const codeElement = document.getElementById(codeTarget);
+                    
+                    if (codeElement) {
+                        // Créer un élément de texte temporaire
+                        const textArea = document.createElement('textarea');
+                        textArea.value = codeElement.textContent;
+                        document.body.appendChild(textArea);
+                        
+                        // Sélectionner et copier le texte
+                        textArea.select();
+                        document.execCommand('copy');
+                        
+                        // Supprimer l'élément temporaire
+                        document.body.removeChild(textArea);
+                        
+                        // Afficher le message de succès
+                        const successMessage = this.nextElementSibling;
+                        if (successMessage && successMessage.classList.contains('copy-success-message')) {
+                            successMessage.style.display = 'inline';
+                            
+                            // Masquer le message après 2 secondes
+                            setTimeout(() => {
+                                successMessage.style.display = 'none';
+                            }, 2000);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
